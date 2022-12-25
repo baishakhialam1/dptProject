@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task for DPT</title>
+    <script>
+        
+        function reverseFn()
+        {
+            var str= document.getElementById("text1").value;
+            
+            for (let j=str.length; j>0; j--){
+                //document.write(j+"<br>")
+                 document.write(str.charAt(j-1))
+            }
+        }
+
+
+        function vowelCount()
+        {
+            var str= document.getElementById("text1").value;
+            const count= str.match(/[aeiou]/gi).length;
+            document.write(count)
+
+        }
+
+        function thirdChar()
+        {
+            var str= document.getElementById("text1").value;
+            document.write(str.charAt(2))
+
+        }
+
+        function spacetoHyphen()
+        {
+            var str= document.getElementById("text1").value;
+            
+            str = str.replace(/\s/g, "-");
+            document.write(str)
+        }
+        
+        function sort()
+        {
+            var str= document.getElementById("text1").value;
+            
+            const sortCharactersInString = str =>
+                [...str].sort((a, b) => a.localeCompare(b)).join('');
+                
+            document.write(sortCharactersInString(str));
+        }
+
+
+    </script>
+</head>
+<body>
+
+    <!-- <input type="text"> -->
+    <input id="text1" placeholder="Name">
+    <br>
+    <button onclick="reverseFn()" id="btn2">Reverse</button>
+    <button onclick="vowelCount()" id="btn3">Vowel Count</button>
+    <button onclick="thirdChar()" id="btn4">Third Character</button>
+    <button onclick="spacetoHyphen()" id="btn4">Space to Hyphen</button>
+    <button onclick="sort()" id="btn4">Sort</button>
+
+</body>
+</html>
